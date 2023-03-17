@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  KioskBrowser
+
+  Created by Tim Preuß on 11.03.23.
+  
+*/
+
+"CFBundleDisplayName" = "Kiosk Browser";
