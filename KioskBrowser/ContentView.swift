@@ -9,12 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @AppStorage("url") var url = "https://www.example.com"
+    @AppStorage("url") var url = "http://localhost:3000"
+    
+    @State private var IsLoading: Bool = false
+    @State private var Error: Error?
     
     var body: some View {
-        WebView(url: url)
-            .edgesIgnoringSafeArea([.bottom])
-            .statusBar(hidden: true)
+        ZStack {
+            WebView(url: url, isLoading: $IsLoading, error: $Error)
+                .edgesIgnoringSafeArea([.bottom])
+                .statusBar(hidden: true)
+            ActivityIndicator(isAnimating: $IsLoading, style: .large)
+                
+        }
     }
 }
 

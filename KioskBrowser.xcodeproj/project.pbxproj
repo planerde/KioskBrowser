@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2291BCFB2AA14D1C0012B812 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291BCFA2AA14D1C0012B812 /* ActivityIndicator.swift */; };
 		22B1E42229BD077900479589 /* KioskBrowserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B1E42129BD077900479589 /* KioskBrowserApp.swift */; };
 		22B1E42429BD077900479589 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B1E42329BD077900479589 /* ContentView.swift */; };
 		22B1E42629BD077A00479589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22B1E42529BD077A00479589 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2291BCFA2AA14D1C0012B812 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		22B1E41E29BD077900479589 /* KioskBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KioskBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B1E42129BD077900479589 /* KioskBrowserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KioskBrowserApp.swift; sourceTree = "<group>"; };
 		22B1E42329BD077900479589 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				22B1E43129BD095100479589 /* WebCacheCleaner.swift */,
 				22B1E43329BD09B100479589 /* Settings.bundle */,
 				22B1E43929BD130C00479589 /* InfoPlist.strings */,
+				2291BCFA2AA14D1C0012B812 /* ActivityIndicator.swift */,
 			);
 			path = KioskBrowser;
 			sourceTree = "<group>";
@@ -108,7 +111,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					22B1E41D29BD077900479589 = {
 						CreatedOnToolsVersion = 14.2;
@@ -154,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22B1E43229BD095100479589 /* WebCacheCleaner.swift in Sources */,
+				2291BCFB2AA14D1C0012B812 /* ActivityIndicator.swift in Sources */,
 				22B1E43029BD084500479589 /* WebView.swift in Sources */,
 				22B1E42429BD077900479589 /* ContentView.swift in Sources */,
 				22B1E42229BD077900479589 /* KioskBrowserApp.swift in Sources */,
@@ -179,6 +183,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -239,6 +244,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
