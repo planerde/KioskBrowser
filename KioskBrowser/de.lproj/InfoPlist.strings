@@ -7,3 +7,5 @@
 */
 
 "CFBundleDisplayName" = "Kiosk Browser";
+"NSCameraUsageDescription" = "Kamera-Zugriff für die Webseite";
+"NSMicrophoneUsageDescription" = "Mikrophone-Zugriff für Webseite";

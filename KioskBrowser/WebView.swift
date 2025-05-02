@@ -36,6 +36,7 @@ struct WebView: UIViewRepresentable {
         let preferences = WKPreferences()
         let configuration = WKWebViewConfiguration()
         configuration.preferences = preferences
+        configuration.allowsInlineMediaPlayback = true;
         
         let request = URLRequest(url: url)
         let wkWebView = WKWebView()
@@ -44,6 +45,7 @@ struct WebView: UIViewRepresentable {
         wkWebView.allowsLinkPreview = false
         wkWebView.scrollView.contentInsetAdjustmentBehavior = .never
         wkWebView.navigationDelegate = context.coordinator
+        wkWebView.uiDelegate = context.coordinator
         
         return wkWebView
     }
@@ -51,7 +53,7 @@ struct WebView: UIViewRepresentable {
     func updateUIView(_ uiView: WKWebView, context: UIViewRepresentableContext<WebView>) {
     }
     
-    class Coordinator: NSObject, WKNavigationDelegate {
+    class Coordinator: NSObject, WKNavigationDelegate, WKUIDelegate {
         var parent: WebView
 
         init(_ parent: WebView) {
@@ -79,6 +81,12 @@ struct WebView: UIViewRepresentable {
                     webView.load(request)
                 }
                 
-          }
+        }
+        
+        @available(iOS 15.0, *)
+        @available(macOS 12.0, *)
+        func webView(_ webView: WKWebView, decideMediaCapturePermissionsFor origin: WKSecurityOrigin, initiatedBy frame: WKFrameInfo, type: WKMediaCaptureType) async -> WKPermissionDecision {
+                return .grant;
+        }
     }
 }

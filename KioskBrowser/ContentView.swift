@@ -19,8 +19,8 @@ struct ContentView: View {
             WebView(url: url, isLoading: $IsLoading, error: $Error)
                 .edgesIgnoringSafeArea([.bottom])
                 .statusBar(hidden: true)
+            
             ActivityIndicator(isAnimating: $IsLoading, style: .large)
-                
         }
     }
 }
