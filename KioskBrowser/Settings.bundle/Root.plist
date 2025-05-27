@@ -14,7 +14,7 @@
 			<key>Key</key>
 			<string>url</string>
 			<key>DefaultValue</key>
-			<string>http://example.com</string>
+			<string></string>
 			<key>IsSecure</key>
 			<false/>
 			<key>KeyboardType</key>

@@ -37,23 +37,28 @@ struct WebView: UIViewRepresentable {
         let configuration = WKWebViewConfiguration()
         configuration.preferences = preferences
         configuration.allowsInlineMediaPlayback = true;
+
+        let contentController = WKUserContentController()
+        contentController.add(context.coordinator, name: "openSettingsKioskApp")
+        configuration.userContentController = contentController
         
         let request = URLRequest(url: url)
-        let wkWebView = WKWebView()
+        let wkWebView = WKWebView(frame: .zero, configuration: configuration)
         wkWebView.load(request)
         wkWebView.allowsBackForwardNavigationGestures = false
         wkWebView.allowsLinkPreview = false
         wkWebView.scrollView.contentInsetAdjustmentBehavior = .never
         wkWebView.navigationDelegate = context.coordinator
         wkWebView.uiDelegate = context.coordinator
-        
+
         return wkWebView
     }
     
     func updateUIView(_ uiView: WKWebView, context: UIViewRepresentableContext<WebView>) {
     }
     
-    class Coordinator: NSObject, WKNavigationDelegate, WKUIDelegate {
+    class Coordinator: NSObject, WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler {
+        
         var parent: WebView
 
         init(_ parent: WebView) {
@@ -87,6 +92,14 @@ struct WebView: UIViewRepresentable {
         @available(macOS 12.0, *)
         func webView(_ webView: WKWebView, decideMediaCapturePermissionsFor origin: WKSecurityOrigin, initiatedBy frame: WKFrameInfo, type: WKMediaCaptureType) async -> WKPermissionDecision {
                 return .grant;
+        }
+        
+        func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+            if message.name == "openSettingsKioskApp" {
+                if let settingsUrl = URL(string: UIApplication.openSettingsURLString) {
+                    UIApplication.shared.open(settingsUrl)
+                }
+            }
         }
     }
 }

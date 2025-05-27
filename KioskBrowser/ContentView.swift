@@ -9,14 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @AppStorage("url") var url = "http://localhost:3000"
+    @AppStorage("URL") var url = (Bundle.main.path(forResource: "tutorial", ofType: "html") ?? "")
     
     @State private var IsLoading: Bool = false
     @State private var Error: Error?
     
     var body: some View {
         ZStack {
-            WebView(url: url, isLoading: $IsLoading, error: $Error)
+            WebView(url: URL(fileURLWithPath: url).absoluteString, isLoading: $IsLoading, error: $Error)
                 .edgesIgnoringSafeArea([.bottom])
                 .statusBar(hidden: true)
             
