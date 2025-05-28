@@ -1,0 +1,9 @@
+"settings_url_section" = "URL";
+"settings_url_placeholder" = "https://beispiel.de";
+"settings_options_section" = "Optionen";
+"settings_clear_cache" = "Cache beim App-Start löschen";
+"settings_reload_after_error" = "Reload nach Fehler (Sekunden)";
+"settings_save_and_reload" = "Speichern und Webseite neu laden";
+"settings_title" = "Einstellungen";
+"settings_close_without_save" = "Schließen ohne zu speichern";
+"settings_url_hint" = "Diese Einstellung kann auch in den Systemeinstellungen geändert werden.";

@@ -1,0 +1,9 @@
+"settings_url_section" = "URL";
+"settings_url_placeholder" = "https://example.com";
+"settings_url_hint" = "You can also change this setting in the system settings.";
+"settings_options_section" = "Options";
+"settings_clear_cache" = "Clear cache on app start";
+"settings_reload_after_error" = "Reload after error (seconds)";
+"settings_save_and_reload" = "Save and reload website";
+"settings_title" = "Settings";
+"settings_close_without_save" = "Close without saving";

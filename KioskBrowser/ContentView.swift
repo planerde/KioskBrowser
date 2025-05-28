@@ -6,21 +6,38 @@
 //
 
 import SwiftUI
+import WebKit
 
 struct ContentView: View {
-    
-    @AppStorage("URL") var url = (Bundle.main.path(forResource: "tutorial", ofType: "html") ?? "")
-    
-    @State private var IsLoading: Bool = false
-    @State private var Error: Error?
-    
+    @AppStorage("url") private var url: String = ""
+    @State private var isLoading: Bool = false
+    @State private var error: Error?
+    @State private var showSettings: Bool = false
+    @State private var webViewReloadTrigger: Bool = false
+
     var body: some View {
         ZStack {
-            WebView(url: URL(fileURLWithPath: url).absoluteString, isLoading: $IsLoading, error: $Error)
-                .edgesIgnoringSafeArea([.bottom])
-                .statusBar(hidden: true)
-            
-            ActivityIndicator(isAnimating: $IsLoading, style: .large)
+            if !url.isEmpty {
+                WebView(url: url, isLoading: $isLoading, error: $error)
+                    .id(webViewReloadTrigger ? 1 : 0)  // force reload on trigger
+            }
+            ActivityIndicator(isAnimating: $isLoading, style: .large)
+        }
+        .onAppear {
+            if url.isEmpty {
+                showSettings = true
+            }
+        }
+        .sheet(
+            isPresented: $showSettings,
+            onDismiss: {
+                // Reload WebView after settings are changed
+                webViewReloadTrigger.toggle()
+            }
+        ) {
+            SettingsView {
+                showSettings = false
+            }
         }
     }
 }

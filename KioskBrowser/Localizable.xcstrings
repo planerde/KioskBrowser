@@ -1,7 +1,152 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%lld" : {
 
+    },
+    "settings_clear_cache" : {
+      "comment" : "Clear cache option",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cache beim App-Start löschen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear cache on app start"
+          }
+        }
+      }
+    },
+    "settings_close_without_save" : {
+      "comment" : "Close without saving help",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schließen ohne zu speichern"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close without saving"
+          }
+        }
+      }
+    },
+    "settings_options_section" : {
+      "comment" : "Options section header",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Optionen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Options"
+          }
+        }
+      }
+    },
+    "settings_reload_after_error" : {
+      "comment" : "Reload after error",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reload nach Fehler (Sekunden)"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reload after error (seconds)"
+          }
+        }
+      }
+    },
+    "settings_save_and_reload" : {
+      "comment" : "Save and reload button",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speichern und Webseite neu laden"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save and reload website"
+          }
+        }
+      }
+    },
+    "settings_title" : {
+      "comment" : "Settings title",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einstellungen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        }
+      }
+    },
+    "settings_url_placeholder" : {
+      "comment" : "URL placeholder",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://beispiel.de"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://example.com"
+          }
+        }
+      }
+    },
+    "settings_url_section" : {
+      "comment" : "URL section header",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL"
+          }
+        }
+      }
+    },
+    "settings_url_hint" : {
+      "comment": "URL hint",
+      "localizations" : {
+        "en" : { "stringUnit": { "state": "translated", "value": "You can also change this setting in the system settings." } },
+        "de" : { "stringUnit": { "state": "translated", "value": "Diese Einstellung kann auch in den Systemeinstellungen geändert werden." } }
+      }
+    }
   },
   "version" : "1.0"
 }
